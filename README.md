@@ -18,17 +18,6 @@ Preview:
 
 - [models.yml](models.yml): per-model metadata used by the gallery cards, including image paths, dates, fact-sheet fields, and related links.
 
-Note that the images are stored in the following format:
-
-```
-DeepSeek R1:
-  image: "/llm-architecture-gallery/images/architectures/deepseek-v3-r1-671-billion.webp"
-  date: '2025-01-20'
-#...
-```
-
-To get the complete link, add the https://sebastianraschka.com/ prefix, e.g., https://sebastianraschka.com/llm-architecture-gallery/images/architectures/deepseek-v3-r1-671-billion.webp
-
 &nbsp;
 ## Notes
 
