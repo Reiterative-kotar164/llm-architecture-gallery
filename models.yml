@@ -1,9 +1,12 @@
 ---
 Arcee AI Trinity Large 400B:
-  image: "/llm-architecture-gallery/images/architectures/arcee-ai-trinity-large-400b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/arcee-ai-trinity-large-400b.webp"
   date: '2026-01-27'
   summary: Arcee's flagship blends several efficiency tricks into a DeepSeek-like coarse MoE design.
   scale: 400B total, 13B active
+  context_tokens: '512,000'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/arcee-ai/Trinity-Large-Base/blob/main/README.md
   decoder_type: Sparse MoE
   attention: GQA with gated attention and 3:1 sliding-window/global attention
   highlight: Combines QK-Norm, RoPE+NoPE, sandwich norm, and a coarse-grained MoE.
@@ -14,10 +17,13 @@ Arcee AI Trinity Large 400B:
   tech_report:
     url: https://arxiv.org/pdf/2602.17004
 DeepSeek R1:
-  image: "/llm-architecture-gallery/images/architectures/deepseek-v3-r1-671-billion.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/deepseek-v3-r1-671-billion.webp"
   date: '2025-01-20'
   summary: Reasoning-tuned DeepSeek model built on the V3 architecture rather than a new base design.
   scale: 671B total, 37B active
+  context_tokens: '128,000'
+  license_name: MIT License
+  license_url: https://huggingface.co/deepseek-ai/DeepSeek-R1/blob/main/LICENSE
   decoder_type: Sparse MoE
   attention: MLA
   highlight: Architecture matches DeepSeek V3; the main change is the reasoning-oriented training recipe.
@@ -28,10 +34,13 @@ DeepSeek R1:
   tech_report:
     url: https://arxiv.org/pdf/2501.12948
 DeepSeek V3:
-  image: "/llm-architecture-gallery/images/architectures/deepseek-v3-r1-671-billion.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/deepseek-v3-r1-671-billion.webp"
   date: '2024-12-26'
   summary: DeepSeek's flagship template kicked off the recent wave of large open MoE models.
   scale: 671B total, 37B active
+  context_tokens: '128,000'
+  license_name: DeepSeek License Agreement v1.0
+  license_url: https://huggingface.co/deepseek-ai/DeepSeek-V3/blame/main/LICENSE-MODEL
   decoder_type: Sparse MoE
   attention: MLA
   highlight: Uses a dense prefix plus a shared expert to keep a very large model practical at inference.
@@ -42,10 +51,13 @@ DeepSeek V3:
   tech_report:
     url: https://arxiv.org/pdf/2412.19437
 DeepSeek V3.2:
-  image: "/llm-architecture-gallery/images/architectures/deepseek-v3-2-671b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/deepseek-v3-2-671b.webp"
   date: '2025-12-01'
   summary: DeepSeek's successor keeps the V3 template but adds sparse attention to cut long-context costs.
   scale: 671B total, 37B active
+  context_tokens: '128,000'
+  license_name: MIT License
+  license_url: https://huggingface.co/deepseek-ai/DeepSeek-V3.2/blob/main/LICENSE
   decoder_type: Sparse MoE
   attention: MLA with DeepSeek Sparse Attention
   highlight: An evolutionary update focused on efficiency rather than a new base layout.
@@ -56,10 +68,13 @@ DeepSeek V3.2:
   tech_report:
     url: https://arxiv.org/pdf/2512.02556
 GLM-4.5 355B:
-  image: "/llm-architecture-gallery/images/architectures/glm-4-5-355b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/glm-4-5-355b.webp"
   date: '2025-07-28'
   summary: Agent-oriented instruction/reasoning hybrid that borrows DeepSeek's dense-prefix MoE layout.
   scale: 355B total, 32B active
+  context_tokens: '128,000'
+  license_name: MIT License
+  license_url: https://huggingface.co/zai-org/GLM-4.5/blob/main/README.md
   decoder_type: Sparse MoE
   attention: GQA with QK-Norm
   highlight: Starts with three dense layers before MoE routing and keeps a shared expert.
@@ -70,10 +85,13 @@ GLM-4.5 355B:
   tech_report:
     url: https://arxiv.org/pdf/2508.06471
 GLM-4.7 355B:
-  image: "/llm-architecture-gallery/images/architectures/glm-4-7-355b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/glm-4-7-355b.webp"
   date: '2025-12-22'
   summary: Immediate GLM predecessor that stays closer to the older GLM-4.5 style before the MLA shift.
   scale: 355B total, 32B active
+  context_tokens: '202,752'
+  license_name: MIT License
+  license_url: https://huggingface.co/zai-org/GLM-4.7/blob/main/README.md
   decoder_type: Sparse MoE
   attention: GQA with QK-Norm
   highlight: Serves as the pre-MLA, pre-sparse-attention baseline with the same 32B active path as GLM-4.5.
@@ -84,10 +102,13 @@ GLM-4.7 355B:
   tech_report:
     url: https://arxiv.org/pdf/2508.06471
 GLM-5 744B:
-  image: "/llm-architecture-gallery/images/architectures/glm-5-744b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/glm-5-744b.webp"
   date: '2026-02-11'
   summary: Huge GLM refresh that adopts both MLA and DeepSeek Sparse Attention for flagship-scale inference.
   scale: 744B total, 40B active
+  context_tokens: '202,752'
+  license_name: MIT License
+  license_url: https://huggingface.co/zai-org/GLM-5/blob/main/README.md
   decoder_type: Sparse MoE
   attention: MLA with DeepSeek Sparse Attention
   highlight: Bigger than GLM-4.7, with more experts and fewer layers.
@@ -97,11 +118,31 @@ GLM-5 744B:
     url: https://huggingface.co/zai-org/GLM-5/blob/main/config.json
   tech_report:
     url: https://arxiv.org/pdf/2602.15763
+GPT-2 XL 1.5B:
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/gpt-2-xl.webp"
+  date: '2019-11-05'
+  summary: Late-2019 dense baseline included here as a reference point for how much decoder stacks have changed since GPT-2.
+  scale: 1.5B parameters
+  context_tokens: '1,024'
+  license_name: OpenAI "Modified MIT" license
+  license_url: https://github.com/openai/gpt-2
+  decoder_type: Dense
+  attention: MHA with learned absolute positional embeddings
+  highlight: Classic GPT-2 recipe with dropout, GELU, LayerNorm, and full multi-head attention.
+  config:
+    repo: openai-community/gpt2-xl
+    label: config.json
+    url: https://huggingface.co/openai-community/gpt2-xl/blob/main/config.json
+  tech_report:
+    url: https://cdn.openai.com/better-language-models/language_models_are_unsupervised_multitask_learners.pdf
 GPT-OSS 120B:
-  image: "/llm-architecture-gallery/images/architectures/gpt-oss-120b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/gpt-oss-120b.webp"
   date: '2025-08-04'
   summary: Larger gpt-oss variant keeps the same alternating-attention recipe as the 20B model.
   scale: 120B parameters
+  context_tokens: '128,000'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/openai/gpt-oss-120b/blob/main/LICENSE
   decoder_type: Sparse MoE
   attention: GQA with alternating sliding-window and global layers
   highlight: Shared architectural template scaled up for OpenAI's flagship open-weight release.
@@ -112,10 +153,13 @@ GPT-OSS 120B:
   tech_report:
     url: https://cdn.openai.com/pdf/419b6906-9da6-406c-a19d-1bb078ac7637/oai_gpt-oss_model_card.pdf
 GPT-OSS 20B:
-  image: "/llm-architecture-gallery/images/architectures/gpt-oss-20b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/gpt-oss-20b.webp"
   date: '2025-08-04'
   summary: OpenAI's smaller open-weight MoE model favors width and alternating local/global attention.
   scale: 20B total, 3.6B active
+  context_tokens: '128,000'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/openai/gpt-oss-20b/blob/main/LICENSE
   decoder_type: Sparse MoE
   attention: GQA with alternating sliding-window and global layers
   highlight: Wider and shallower than Qwen3, with attention bias and sink mechanisms.
@@ -125,11 +169,33 @@ GPT-OSS 20B:
     url: https://huggingface.co/openai/gpt-oss-20b/blob/main/config.json
   tech_report:
     url: https://cdn.openai.com/pdf/419b6906-9da6-406c-a19d-1bb078ac7637/oai_gpt-oss_model_card.pdf
+Gemma 3 270M:
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/gemma-3-270m.webp"
+  date: '2025-08-14'
+  summary: Tiny Gemma 3 variant that preserves the family's local-global attention recipe at a toy scale.
+  scale: 270M parameters
+  context_tokens: '128,000'
+  license_name: Gemma Terms of Use + Gemma Prohibited Use Policy
+  license_url: https://ai.google.dev/gemma/prohibited_use_policy
+  decoder_type: Dense
+  attention: Multi-query attention with QK-Norm and 5:1 sliding-window/global attention
+  highlight: Keeps the Gemma 3 stack shape while shrinking down to 4 attention heads and a single KV head.
+  config:
+    repo: google/gemma-3-270m
+    label: config.json
+    url: https://huggingface.co/google/gemma-3-270m/blob/main/config.json
+  tech_report:
+    url: https://arxiv.org/pdf/2503.19786
+  from_scratch:
+    url: https://github.com/rasbt/LLMs-from-scratch/tree/main/ch05/12_gemma3
 Gemma 3 27B:
-  image: "/llm-architecture-gallery/images/architectures/gemma-3-27b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/gemma-3-27b.webp"
   date: '2025-03-11'
   summary: Gemma's flagship text stack leans on local attention more aggressively than Gemma 2.
   scale: 27B parameters
+  context_tokens: '128,000'
+  license_name: Gemma Terms of Use + Gemma Prohibited Use Policy
+  license_url: https://ai.google.dev/gemma/prohibited_use_policy
   decoder_type: Dense
   attention: GQA with QK-Norm and 5:1 sliding-window/global attention
   highlight: Built around a 27B sweet spot with heavier local attention and a large multilingual vocabulary.
@@ -142,10 +208,13 @@ Gemma 3 27B:
   from_scratch:
     url: https://github.com/rasbt/LLMs-from-scratch/tree/main/ch05/12_gemma3
 Grok 2.5 270B:
-  image: "/llm-architecture-gallery/images/architectures/grok-2-5-270b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/grok-2-5-270b.webp"
   date: '2025-08-22'
   summary: Rare production-model release that shows an older MoE style with fewer, larger experts.
   scale: 270B parameters
+  context_tokens: '131,072'
+  license_name: Grok 2 Community License Agreement
+  license_url: https://huggingface.co/xai-org/grok-2/blob/main/README.md
   decoder_type: Sparse MoE
   attention: GQA
   highlight: Adds an always-on SwiGLU path that effectively behaves like a shared expert.
@@ -154,10 +223,13 @@ Grok 2.5 270B:
     label: config.json
     url: https://huggingface.co/xai-org/grok-2/blob/main/config.json
 Kimi K2:
-  image: "/llm-architecture-gallery/images/architectures/kimi-k2-1-trillion.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/kimi-k2-1-trillion.webp"
   date: '2025-07-10'
   summary: Trillion-parameter Moonshot model that essentially scales the DeepSeek V3 recipe upward.
   scale: 1T total, 32B active
+  context_tokens: '128,000'
+  license_name: Modified MIT License
+  license_url: https://huggingface.co/moonshotai/Kimi-K2-Base/blame/main/LICENSE
   decoder_type: Sparse MoE
   attention: MLA
   highlight: More experts and fewer MLA heads than DeepSeek V3.
@@ -167,11 +239,31 @@ Kimi K2:
     url: https://huggingface.co/moonshotai/Kimi-K2-Base/blob/main/config.json
   tech_report:
     url: https://arxiv.org/pdf/2507.20534
+Kimi K2.5:
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/kimi-k2-5.webp"
+  date: '2026-01-27'
+  summary: Native-multimodal Moonshot flagship that keeps the K2/DeepSeek-style MoE layout and pushes native context to 256k.
+  scale: 1T total, 32B active
+  context_tokens: '256,000'
+  license_name: Modified MIT License
+  license_url: https://huggingface.co/moonshotai/Kimi-K2.5/blob/main/LICENSE
+  decoder_type: Sparse MoE
+  attention: MLA
+  highlight: Keeps the 384-expert K2 backbone, but adds multimodal capabilities (not shown) and doubles the native context length.
+  config:
+    repo: moonshotai/Kimi-K2.5
+    label: config.json
+    url: https://huggingface.co/moonshotai/Kimi-K2.5/blob/main/config.json
+  tech_report:
+    url: https://arxiv.org/pdf/2602.02276
 Kimi Linear 48B-A3B:
-  image: "/llm-architecture-gallery/images/architectures/kimi-linear-48b-a3b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/kimi-linear-48b-a3b.webp"
   date: '2025-10-30'
   summary: Linear-attention hybrid that keeps a transformer backbone but replaces most full-attention layers.
   scale: 48B total, 3B active
+  context_tokens: '1,000,000'
+  license_name: MIT License
+  license_url: https://github.com/MoonshotAI/Kimi-Linear
   decoder_type: Sparse hybrid
   attention: 3:1 Kimi Delta Attention and MLA
   highlight: Uses NoPE in MLA layers and channel-wise gating for long-context efficiency.
@@ -182,10 +274,13 @@ Kimi Linear 48B-A3B:
   tech_report:
     url: https://arxiv.org/pdf/2510.26692
 Ling 2.5 1T:
-  image: "/llm-architecture-gallery/images/architectures/ling-2-5-1t.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/ling-2-5-1t.webp"
   date: '2026-02-15'
   summary: Trillion-parameter long-context model that swaps DeltaNet for Lightning Attention.
   scale: 1T total, 63B active
+  context_tokens: '256,000'
+  license_name: MIT License
+  license_url: https://huggingface.co/inclusionAI/Ling-2.5-1T/blob/main/README.md
   decoder_type: Sparse hybrid
   attention: Lightning Attention plus MLA
   highlight: Uses a 7:1 linear-attention/MLA ratio and a much larger 63B active path.
@@ -193,17 +288,27 @@ Ling 2.5 1T:
     repo: inclusionAI/Ling-2.5-1T
     label: config.json
     url: https://huggingface.co/inclusionAI/Ling-2.5-1T/blob/main/config.json
-Llama 3 1B:
-  summary: Small dense baseline in the Qwen comparison, with fewer layers but more width.
+Llama 3.2 1B:
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/llama-3-2-1b.webp"
+  date: '2024-09-25'
+  summary: Small dense Llama baseline in the Qwen comparison, with fewer layers but more width.
   scale: 1B parameters
+  context_tokens: '128,000'
+  license_name: Llama Community License Agreement (variant-specific)
+  license_url: https://huggingface.co/meta-llama/Llama-3.2-1B/blob/main/LICENSE.txt
   decoder_type: Dense
   attention: GQA
   highlight: Wider architecture with more heads than Qwen3 0.6B.
+  from_scratch:
+    url: https://github.com/rasbt/LLMs-from-scratch/tree/main/ch05/07_gpt_to_llama
 Llama 3 8B:
-  image: "/llm-architecture-gallery/images/architectures/llama-3-8b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/llama-3-8b.webp"
   date: '2024-04-18'
   summary: Reference dense Llama stack used to contrast OLMo 2's normalization and attention choices.
   scale: 8B parameters
+  context_tokens: '8,192'
+  license_name: Llama 3 Community License Agreement
+  license_url: https://huggingface.co/meta-llama/Meta-Llama-3-8B/blob/main/LICENSE
   decoder_type: Dense
   attention: GQA with RoPE
   highlight: Pre-norm baseline; wider than OLMo 2 at a similar scale.
@@ -218,14 +323,20 @@ Llama 3 8B:
 Llama 3.2 3B:
   summary: Small Llama baseline used to show how closely Nanbeige follows the mainstream compact decoder recipe.
   scale: 3B parameters
+  context_tokens: '128,000'
+  license_name: Llama 3.2 Community License Agreement
+  license_url: https://huggingface.co/meta-llama/Llama-3.2-3B/blob/main/LICENSE.txt
   decoder_type: Dense
   attention: GQA
   highlight: Reference small-model Llama architecture with tied embeddings.
 Llama 4 Maverick:
-  image: "/llm-architecture-gallery/images/architectures/llama-4-maverick-400b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/llama-4-maverick-400b.webp"
   date: '2025-04-05'
   summary: Meta's large MoE follows the DeepSeek V3 playbook but with a more conventional attention stack.
   scale: 400B total, 17B active
+  context_tokens: '1,000,000'
+  license_name: Llama 4 Community License Agreement
+  license_url: https://huggingface.co/meta-llama/Llama-4-Maverick
   decoder_type: Sparse MoE
   attention: GQA
   highlight: Alternates dense and MoE blocks and uses fewer, larger experts than DeepSeek V3.
@@ -236,10 +347,13 @@ Llama 4 Maverick:
   tech_report:
     url: https://ai.meta.com/blog/llama-4-multimodal-intelligence/
 MiniMax M2 230B:
-  image: "/llm-architecture-gallery/images/architectures/minimax-m2-230b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/minimax-m2-230b.webp"
   date: '2025-10-23'
   summary: MiniMax's flagship returns to full attention and looks like a leaner, sparser cousin of Qwen3.
   scale: 230B total, 10B active
+  context_tokens: '196,608'
+  license_name: Modified MIT License
+  license_url: https://huggingface.co/MiniMaxAI/MiniMax-M2/blob/main/README.md
   decoder_type: Sparse MoE
   attention: GQA with QK-Norm and partial RoPE
   highlight: Uses per-layer QK-Norm and much sparser MoE routing than Qwen3.
@@ -248,10 +362,13 @@ MiniMax M2 230B:
     label: config.json
     url: https://huggingface.co/MiniMaxAI/MiniMax-M2/blob/main/config.json
 MiniMax M2.5 230B:
-  image: "/llm-architecture-gallery/images/architectures/minimax-m2-5-230b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/minimax-m2-5-230b.webp"
   date: '2026-02-12'
   summary: Popular 230B coder that opts for a classic architecture instead of the newer hybrid-attention ideas.
   scale: 230B total, 10B active
+  context_tokens: '196,608'
+  license_name: Modified MIT License
+  license_url: https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/README.md
   decoder_type: Sparse MoE
   attention: GQA with QK-Norm
   highlight: Deliberately avoids sliding-window or linear-attention hybrids while keeping a 10B active path.
@@ -259,11 +376,14 @@ MiniMax M2.5 230B:
     repo: MiniMaxAI/MiniMax-M2.5
     label: config.json
     url: https://huggingface.co/MiniMaxAI/MiniMax-M2.5/blob/main/config.json
-Mistral 3 Large:
-  image: "/llm-architecture-gallery/images/architectures/mistral-3-large-673-billion.webp"
+Mistral Large 3:
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/mistral-3-large-673-billion.webp"
   date: '2025-12-02'
   summary: Mistral's new flagship effectively adopts the DeepSeek architecture and retunes the expert sizes.
   scale: 673B total, 41B active
+  context_tokens: '262,144'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512/blob/main/README.md
   decoder_type: Sparse MoE
   attention: MLA
   highlight: Near-clone of DeepSeek V3 with larger experts, fewer routed experts, and multimodal support.
@@ -272,10 +392,13 @@ Mistral 3 Large:
     label: params.json
     url: https://huggingface.co/mistralai/Mistral-Large-3-675B-Instruct-2512/blob/main/params.json
 Mistral Small 3.1 24B:
-  image: "/llm-architecture-gallery/images/architectures/mistral-3-1-small-24b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/mistral-3-1-small-24b.webp"
   date: '2025-03-18'
   summary: Fast dense 24B model that drops the sliding-window setup used in older Mistral releases.
   scale: 24B parameters
+  context_tokens: '128,000'
+  license_name: Apache License 2.0
+  license_url: https://mistral.ai/news/mistral-small-3-1
   decoder_type: Dense
   attention: Standard GQA
   highlight: Latency-focused design with a smaller KV cache and fewer layers than Gemma 3 27B.
@@ -285,11 +408,32 @@ Mistral Small 3.1 24B:
     url: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Base-2503/blob/main/config.json
   tech_report:
     url: https://mistral.ai/news/mistral-small-3-1
+Mistral Small 4:
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/mistral-small-4.webp"
+  date: '2026-03-16'
+  summary: Multimodal Mistral Small refresh that jumps from the older dense 24B stack to an MLA-based sparse MoE design.
+  scale: 119B total, 6.63B active
+  context_tokens: '256,000'
+  license_name: Apache License 2.0
+  license_url: https://mistral.ai/news/mistral-small-4
+  decoder_type: Sparse MoE
+  attention: MLA
+  highlight: Uses 128 experts with 4 routed plus 1 shared expert active per token while unifying instruct, reasoning, and vision.
+  config:
+    repo: mistralai/Mistral-Small-4-119B-2603
+    label: config.json
+    url: https://huggingface.co/mistralai/Mistral-Small-4-119B-2603/blob/main/config.json
+  hide_article_link: true
+  tech_report:
+    url: https://mistral.ai/news/mistral-small-4
 Nanbeige 4.1 3B:
-  image: "/llm-architecture-gallery/images/architectures/nanbeige-4-1-3b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/nanbeige-4-1-3b.webp"
   date: '2026-02-10'
   summary: Small on-device oriented model that stays close to Llama 3.2 while nudging the scaling choices.
   scale: 3B parameters
+  context_tokens: '262,144'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/Nanbeige/Nanbeige4.1-3B/blob/main/README.md
   decoder_type: Dense
   attention: GQA
   highlight: Llama-like stack without tying input embeddings to the output layer.
@@ -300,10 +444,13 @@ Nanbeige 4.1 3B:
   tech_report:
     url: https://arxiv.org/pdf/2602.13367
 Nemotron 3 Nano 30B-A3B:
-  image: "/llm-architecture-gallery/images/architectures/nemotron-3-nano-30b-a3b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/nemotron-3-nano-30b-a3b.webp"
   date: '2025-12-04'
   summary: NVIDIA's Nano model is the most extreme transformer-state-space hybrid in the gallery.
   scale: 30B total, 3B active
+  context_tokens: '1,000,000'
+  license_name: NVIDIA Nemotron Open Model License
+  license_url: https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-nemotron-open-model-license/
   decoder_type: Hybrid MoE
   attention: Mostly Mamba-2 with a few GQA layers
   highlight: Interleaves Mamba-2 and MoE blocks, using attention only sparingly.
@@ -313,11 +460,32 @@ Nemotron 3 Nano 30B-A3B:
     url: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B-BF16/blob/main/config.json
   tech_report:
     url: https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Nano-Technical-Report.pdf
+Nemotron 3 Nano 4B:
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/nemotron-3-nano-4b.webp"
+  date: '2026-03-16'
+  summary: Compact on-device hybrid that compresses Nemotron Nano 9B v2 into a mostly Mamba-2 stack with only four attention layers.
+  scale: 4B parameters
+  context_tokens: '262,144'
+  license_name: NVIDIA Nemotron Open Model License
+  license_url: https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-nemotron-open-model-license/
+  decoder_type: Dense hybrid
+  attention: GQA with only 4 attention layers
+  highlight: Uses a 42-layer stack with 21 Mamba-2 blocks, 17 ReLU² FFNs, and just 4 GQA layers.
+  config:
+    repo: nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16
+    label: config.json
+    url: https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Nano-4B-BF16/blob/main/config.json
+  hide_article_link: true
+  tech_report:
+    url: https://huggingface.co/blog/nvidia/nemotron-3-nano-4b
 Nemotron 3 Super 120B-A12B:
-  image: "/llm-architecture-gallery/images/architectures/nemotron-3-super-120b-a12b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/nemotron-3-super-120b-a12b.webp"
   date: '2026-03-11'
   summary: The Super variant scales up Nano and adds both latent experts and native speculative decoding support.
   scale: 120B total, 12B active
+  context_tokens: '1,000,000'
+  license_name: NVIDIA Nemotron Open Model License
+  license_url: https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-nemotron-open-model-license/
   decoder_type: Hybrid MoE
   attention: Mostly Mamba-2 with a few GQA layers
   highlight: Adds latent-space MoE and shared-weight MTP for fast inference.
@@ -328,10 +496,13 @@ Nemotron 3 Super 120B-A12B:
   tech_report:
     url: https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf
 OLMo 2 7B:
-  image: "/llm-architecture-gallery/images/architectures/olmo-2-7b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/olmo-2-7b.webp"
   date: '2024-11-25'
   summary: Transparent dense model that keeps classic MHA and pushes normalization changes for training stability.
   scale: 7B parameters
+  context_tokens: '4,096'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/allenai/OLMo-2-1124-7B-Instruct/blob/main/README.md
   decoder_type: Dense
   attention: MHA with QK-Norm
   highlight: Uses inside-residual post-norm instead of the usual pre-norm layout.
@@ -342,10 +513,13 @@ OLMo 2 7B:
   tech_report:
     url: https://arxiv.org/pdf/2501.00656
 OLMo 3 32B:
-  image: "/llm-architecture-gallery/images/architectures/olmo-3-32b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/olmo-3-32b.webp"
   date: '2025-11-20'
   summary: Scaled-up OLMo 3 keeps the same block design but moves to grouped-query attention.
   scale: 32B parameters
+  context_tokens: '65,536'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/allenai/Olmo-3-1125-32B/blob/main/README.md
   decoder_type: Dense
   attention: GQA with QK-Norm and 3:1 sliding-window/global attention
   highlight: Keeps post-norm while scaling width and applying YaRN only on global layers.
@@ -358,10 +532,13 @@ OLMo 3 32B:
   from_scratch:
     url: https://github.com/rasbt/LLMs-from-scratch/tree/main/ch05/13_olmo3
 OLMo 3 7B:
-  image: "/llm-architecture-gallery/images/architectures/olmo-3-7b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/olmo-3-7b.webp"
   date: '2025-11-20'
   summary: New transparent Allen AI model that keeps OLMo's post-norm flavor while modernizing context handling.
   scale: 7B parameters
+  context_tokens: '65,536'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/allenai/Olmo-3-1025-7B/blob/main/README.md
   decoder_type: Dense
   attention: MHA with QK-Norm and 3:1 sliding-window/global attention
   highlight: Retains post-norm, keeps MHA, and applies YaRN only on global layers.
@@ -373,18 +550,42 @@ OLMo 3 7B:
     url: https://arxiv.org/pdf/2512.13961
   from_scratch:
     url: https://github.com/rasbt/LLMs-from-scratch/tree/main/ch05/13_olmo3
+Phi-4:
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/phi-4.webp"
+  date: '2024-12-12'
+  summary: Microsoft's 14B dense Phi refresh stays close to Phi-3-medium but swaps its sliding-window attention for full-context GQA and a larger tokenizer.
+  scale: 14B parameters
+  context_tokens: '16,384'
+  license_name: MIT License
+  license_url: https://huggingface.co/microsoft/phi-4/blob/main/LICENSE
+  decoder_type: Dense
+  attention: GQA with RoPE
+  highlight: Classic pre-norm RMSNorm stack with GQA, 40 heads, 10 KV heads, and a 100,352-token vocabulary.
+  config:
+    repo: microsoft/phi-4
+    label: config.json
+    url: https://huggingface.co/microsoft/phi-4/blob/main/config.json
+  hide_article_link: true
+  tech_report:
+    url: https://arxiv.org/pdf/2412.08905
 Qwen3 0.6B:
   date: '2025-04-28'
   summary: Tiny current-generation Qwen model that trades width for more depth and a low memory footprint.
   scale: 0.6B parameters
+  context_tokens: '32,768'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/Qwen/Qwen3-0.6B-Base/blob/main/LICENSE
   decoder_type: Dense
   attention: GQA
-  highlight: Deeper than Llama 3 1B and unusually practical for local experiments and teaching.
+  highlight: Deeper than Llama 3.2 1B and unusually practical for local experiments and teaching.
 Qwen3 235B-A22B:
-  image: "/llm-architecture-gallery/images/architectures/qwen3-235b-a22b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/qwen3-235b-a22b.webp"
   date: '2025-04-28'
   summary: Large sparse Qwen variant that stays very close to DeepSeek V3 while removing the shared expert.
   scale: 235B total, 22B active
+  context_tokens: '128,000'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/Qwen/Qwen3-235B-A22B/blob/main/LICENSE
   decoder_type: Sparse MoE
   attention: GQA with QK-Norm
   highlight: High-capacity MoE design optimized for serving efficiency without a shared expert.
@@ -400,14 +601,20 @@ Qwen3 30B-A3B:
   date: '2025-04-28'
   summary: Small sparse Qwen3 model that sits close to GPT-OSS in active size but uses a deeper stack.
   scale: 30B total, 3B active
+  context_tokens: '128,000'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/Qwen/Qwen3-30B-A3B/blob/main/LICENSE
   decoder_type: Sparse MoE
   attention: GQA
   highlight: Deeper, narrower MoE alternative to GPT-OSS without a shared expert.
 Qwen3 32B:
-  image: "/llm-architecture-gallery/images/architectures/qwen3-32b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/qwen3-32b.webp"
   date: '2025-04-28'
   summary: Large dense Qwen3 model that serves as the clearest like-for-like comparison for OLMo 3 32B.
   scale: 32B parameters
+  context_tokens: '128,000'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/Qwen/Qwen3-32B/blob/main/LICENSE
   decoder_type: Dense
   attention: GQA with QK-Norm
   highlight: Reference dense Qwen stack with QK-Norm and 8 KV heads.
@@ -420,10 +627,13 @@ Qwen3 32B:
   from_scratch:
     url: https://github.com/rasbt/LLMs-from-scratch/tree/main/ch05/11_qwen3
 Qwen3 4B:
-  image: "/llm-architecture-gallery/images/architectures/qwen3-4b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/qwen3-4b.webp"
   date: '2025-04-28'
   summary: Mid-size dense Qwen3 model used here as a clean baseline against SmolLM3 and Tiny Aya.
   scale: 4B parameters
+  context_tokens: '32,768'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/Qwen/Qwen3-4B/blob/main/LICENSE
   decoder_type: Dense
   attention: GQA with QK-Norm
   highlight: Compact Qwen3 dense stack with QK-Norm and a 151k vocabulary.
@@ -436,10 +646,13 @@ Qwen3 4B:
   from_scratch:
     url: https://github.com/rasbt/LLMs-from-scratch/tree/main/ch05/11_qwen3
 Qwen3 8B:
-  image: "/llm-architecture-gallery/images/architectures/qwen3-8b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/qwen3-8b.webp"
   date: '2025-04-28'
   summary: Dense Qwen3 baseline used here to show how little OLMo 3 changed the overall decoder recipe.
   scale: 8B parameters
+  context_tokens: '128,000'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/Qwen/Qwen3-8B/blob/main/LICENSE
   decoder_type: Dense
   attention: GQA with QK-Norm
   highlight: Reference Qwen3 dense stack with QK-Norm and 8 KV heads.
@@ -452,10 +665,13 @@ Qwen3 8B:
   from_scratch:
     url: https://github.com/rasbt/LLMs-from-scratch/tree/main/ch05/11_qwen3
 Qwen3 Next 80B-A3B:
-  image: "/llm-architecture-gallery/images/architectures/qwen3-next-80b-a3b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/qwen3-next-80b-a3b.webp"
   date: '2025-09-09'
   summary: Efficiency-focused Qwen refresh that swaps standard attention for a DeltaNet-attention hybrid.
   scale: 80B total, 3B active
+  context_tokens: '262,144'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct/blob/main/LICENSE
   decoder_type: Sparse hybrid
   attention: 3:1 Gated DeltaNet and Gated Attention
   highlight: Adds many more experts, a shared expert, and a native 262k context.
@@ -463,18 +679,31 @@ Qwen3 Next 80B-A3B:
     repo: Qwen/Qwen3-Next-80B-A3B-Instruct
     label: config.json
     url: https://huggingface.co/Qwen/Qwen3-Next-80B-A3B-Instruct/blob/main/config.json
-Qwen3-Coder-Next 80B:
-  date: '2026-01-30'
-  summary: Coding-specialized follow-on that keeps the Qwen3-Next base architecture intact.
-  scale: 80B total, 3B active
-  decoder_type: Sparse hybrid
-  attention: 3:1 Gated DeltaNet and Gated Attention
-  highlight: Qwen3-Next architecture repurposed for coding and long-context efficiency.
+Qwen3 Coder Flash 30B-A3B:
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/qwen3-coder-flash-30b-a3b-mixture-of-experts.webp"
+  date: '2025-07-31'
+  summary: Coding-tuned Qwen model that keeps a straightforward grouped-query MoE stack instead of the newer hybrid-attention variants.
+  scale: 30B total, 3.3B active
+  context_tokens: '256,000'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/blob/main/LICENSE
+  decoder_type: Sparse MoE
+  attention: GQA
+  highlight: Uses 128 experts with 8 active per token and a native 256k context window for coding workloads.
+  config:
+    repo: Qwen/Qwen3-Coder-30B-A3B-Instruct
+    label: config.json
+    url: https://huggingface.co/Qwen/Qwen3-Coder-30B-A3B-Instruct/blob/main/config.json
+  from_scratch:
+    url: https://github.com/rasbt/LLMs-from-scratch/tree/main/ch05/11_qwen3
 Qwen3.5 397B:
-  image: "/llm-architecture-gallery/images/architectures/qwen3-5-397b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/qwen3-5-397b.webp"
   date: '2026-02-16'
   summary: Mainline Qwen refresh that brings the Next-style hybrid attention into the flagship series.
   scale: 397B total, 17B active
+  context_tokens: '262,144'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/main/LICENSE
   decoder_type: Sparse hybrid
   attention: 3:1 Gated DeltaNet and Gated Attention
   highlight: Turns the former Qwen3-Next side branch into the new core design with 512 experts and 17B active parameters.
@@ -485,10 +714,13 @@ Qwen3.5 397B:
   from_scratch:
     url: https://github.com/rasbt/LLMs-from-scratch/tree/main/ch05/16_qwen3.5
 Sarvam 105B:
-  image: "/llm-architecture-gallery/images/architectures/sarvam-105b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/sarvam-105b.webp"
   date: '2026-03-03'
   summary: Larger Sarvam variant keeps the sparse MoE layout but switches from GQA to MLA.
   scale: 105B total
+  context_tokens: '131,072'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/sarvamai/sarvam-105b/blob/main/README.md
   decoder_type: Sparse MoE
   attention: MLA with KV LayerNorm and NoPE + RoPE
   highlight: Large vocabulary and strong Indic language support carried into the larger MLA-based sparse MoE variant.
@@ -496,11 +728,16 @@ Sarvam 105B:
     repo: sarvamai/sarvam-105b
     label: config.json
     url: https://huggingface.co/sarvamai/sarvam-105b/blob/main/config.json
+  tech_report:
+    url: https://www.sarvam.ai/blogs/sarvam-30b-105b
 Sarvam 30B:
-  image: "/llm-architecture-gallery/images/architectures/sarvam-30b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/sarvam-30b.webp"
   date: '2026-03-03'
   summary: Reasoning-oriented Indian-language sparse MoE that keeps GQA at the smaller size.
   scale: 30B total
+  context_tokens: '131,072'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/sarvamai/sarvam-30b/blob/main/README.md
   decoder_type: Sparse MoE
   attention: GQA with QK-Norm
   highlight: Large vocabulary and strong Indic language support paired with a reasoning-focused sparse MoE design.
@@ -508,11 +745,16 @@ Sarvam 30B:
     repo: sarvamai/sarvam-30b
     label: config.json
     url: https://huggingface.co/sarvamai/sarvam-30b/blob/main/config.json
+  tech_report:
+    url: https://www.sarvam.ai/blogs/sarvam-30b-105b
 SmolLM3 3B:
-  image: "/llm-architecture-gallery/images/architectures/smollm3-3b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/smollm3-3b.webp"
   date: '2025-06-19'
   summary: Compact dense model that experiments with leaving out positional encodings in selected layers.
   scale: 3B parameters
+  context_tokens: '131,072'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/HuggingFaceTB/SmolLM3-3B-Base/blob/main/README.md
   decoder_type: Dense
   attention: GQA with periodic NoPE layers
   highlight: Every fourth layer omits RoPE to test a NoPE-style cadence.
@@ -523,10 +765,13 @@ SmolLM3 3B:
   tech_report:
     url: https://huggingface.co/blog/smollm3
 Step 3.5 Flash 196B:
-  image: "/llm-architecture-gallery/images/architectures/step-3-5-flash-196b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/step-3-5-flash-196b.webp"
   date: '2026-02-01'
   summary: Throughput-oriented MoE model that stays competitive with much larger DeepSeek-style systems.
   scale: 196B total, 11B active
+  context_tokens: '262,144'
+  license_name: Apache License 2.0
+  license_url: https://huggingface.co/stepfun-ai/Step-3.5-Flash/blob/main/README.md
   decoder_type: Sparse MoE
   attention: GQA with 3:1 sliding-window attention
   highlight: Uses MTP-3 during both training and inference for unusually high throughput.
@@ -537,10 +782,13 @@ Step 3.5 Flash 196B:
   tech_report:
     url: https://arxiv.org/pdf/2602.10604
 Tiny Aya 3.35B:
-  image: "/llm-architecture-gallery/images/architectures/tiny-aya-3-35b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/tiny-aya-3-35b.webp"
   date: '2026-02-13'
   summary: Compact multilingual model from Cohere with a rare parallel transformer block.
   scale: 3.35B parameters
+  context_tokens: '8,192'
+  license_name: Creative Commons Attribution-NonCommercial 4.0
+  license_url: https://huggingface.co/CohereLabs/tiny-aya-base/blob/main/README.md
   decoder_type: Dense
   attention: GQA with 3:1 sliding-window attention
   highlight: Runs attention and the MLP in parallel while mixing RoPE with NoPE.
@@ -553,10 +801,13 @@ Tiny Aya 3.35B:
   from_scratch:
     url: https://github.com/rasbt/LLMs-from-scratch/tree/main/ch05/15_tiny-aya
 Xiaomi MiMo-V2-Flash 309B:
-  image: "/llm-architecture-gallery/images/architectures/xiaomi-mimo-v2-flash-309b.webp"
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/xiaomi-mimo-v2-flash-309b.webp"
   date: '2025-12-16'
   summary: Large MoE model that pushes sliding-window attention harder than most contemporaries.
   scale: 309B total, 15B active
+  context_tokens: '262,144'
+  license_name: MIT License
+  license_url: https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash/blob/main/README.md
   decoder_type: Sparse MoE
   attention: 5:1 sliding-window/global attention
   highlight: Uses an unusually small 128-token local window plus multi-token prediction.
@@ -566,3 +817,21 @@ Xiaomi MiMo-V2-Flash 309B:
     url: https://huggingface.co/XiaomiMiMo/MiMo-V2-Flash/blob/main/config.json
   tech_report:
     url: https://arxiv.org/pdf/2601.02780
+xLSTM 7B:
+  image: "https://sebastianraschka.com/llm-architecture-gallery/images/architectures/xlstm-7b.webp"
+  date: '2025-03-17'
+  summary: Recurrent 7B language model that replaces self-attention with xLSTM blocks built around matrix memory.
+  scale: 7B parameters
+  context_tokens: No explicit limit
+  license_name: NXAI Community License Agreement
+  license_url: https://huggingface.co/NX-AI/xLSTM-7b/blob/main/LICENSE
+  decoder_type: Recurrent
+  attention: No self-attention; mLSTM recurrent layers with matrix memory
+  highlight: Stateful recurrent architecture aimed at fast long-context inference without an explicit context window.
+  config:
+    repo: NX-AI/xLSTM-7b
+    label: config.json
+    url: https://huggingface.co/NX-AI/xLSTM-7b/blob/main/config.json
+  hide_article_link: true
+  tech_report:
+    url: https://arxiv.org/abs/2503.13427
